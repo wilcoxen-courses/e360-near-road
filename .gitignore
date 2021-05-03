@@ -3,5 +3,10 @@ __pycache__/
 .DS_Store
 **/.DS_Store
 *.zip
-*.csv
 *.pkl
+*.cpg
+*.dbf
+*.prj
+*.shp
+*.shx
+*.gpkg
