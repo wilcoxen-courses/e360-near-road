@@ -76,7 +76,7 @@ There are four deliverables: scripts **pop_by_bg.py** and **near_road.py** and g
 
 1. Then set column `"near"` of `count_res` equal to the result of calling `.fillna(0)` on itself to set any missing values to 0. This step is necessary because many block groups in the county are more than 2000 m from any interstate and thus have no houses in any of the rings.
 
-1. Set column `"far"` of `count_res` to the difference between the `"total"` and `"near"` columns of `count_res`. This is the number of houses in each block group outside the outer ring.
+1. Set column `"far"` of `count_res` to the difference between the `"count"` and `"near"` columns of `count_res`. This is the number of houses in each block group outside the outer ring.
 
 1. Set `houses` to the result of calling `pd.DataFrame()` with the argument `index=count_res.index`. Using the `index=` argument ensures that the index will have an entry for every inhabited block group in the county (not just those near the highways) since `county_res` was built from the Census population data.
 
